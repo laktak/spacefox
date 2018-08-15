@@ -1,0 +1,107 @@
+html, body {
+  min-width: 300px;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #d8d8d8;
+}
+
+a {
+  text-decoration: none;
+  color: #323131;
+}
+
+.main {
+  margin: 0;
+}
+
+.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+}
+
+.active-space {
+}
+.active-space #more {
+  margin-left: 5px;
+}
+
+.active-space input {
+  background-color: transparent;
+  border: transparent;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+.spaces {
+}
+
+.space {
+  background-color: #f9f3f3;
+  padding: 5px;
+  margin: 1px 0 1px 0;
+}
+
+.space-loaded {
+  background-color: #efecec;
+}
+
+.space a {
+  color: #323131;
+  margin-left: 5px;
+}
+
+.space-cmd {
+  display: none;
+}
+
+.space:hover .space-cmd {
+   display: inline;
+}
+
+.space-cmd {
+  padding-left: 5px;
+  float: right;
+}
+
+.tools {
+  padding: 1px;
+}
+.buttons a {
+  display: inline-block;
+  font-size: 80%;
+  color: #eee;
+  background-color: #8c8787;
+  padding: 5px;
+  margin-right: 1px;
+}
+
+.split {
+  display: none;
+  margin: 5px;
+}
+.split .tools {
+  margin: 10px;
+}
+
+.tab {
+  background-color: #f9f3f3;
+  padding: 5px;
+  margin-top: 2px;
+}
+
+.space-view {
+  display: none;
+  margin: 5px;
+}
+
+.space-view .title {
+  margin: 10px 5px;
+}
+
+.space-view .title a {
+  margin-right: 10px;
+}

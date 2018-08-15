@@ -1,0 +1,45 @@
+{
+  "manifest_version": 2,
+
+  "name": "SpaceFox",
+  "description": "SpaceFox manages browser tabs. Each window is a space that can be closed and restored on demand.",
+  "version": "0.1.5",
+
+  "author": "Christian Zangl",
+  "homepage_url": "https://github.com/laktak/spacefox",
+
+  "permissions": [
+    "bookmarks",
+    "tabs",
+    "storage",
+    "sessions"
+  ],
+
+  "applications": {
+    "gecko": {
+      "id": "{d4fc4b6c-7aae-4956-9609-f94de79ab93e}"
+    }
+  },
+
+  "icons": {
+    "96": "icons/spacefox.png"
+  },
+
+  "background": {
+    "scripts": [
+      "browser-polyfill.min.js",
+      "src/spacefox.js",
+      "src/names.js",
+      "src/main.js"
+    ]
+  },
+
+  "incognito": "spanning",
+
+  "browser_action": {
+    "default_icon": "icons/spacefox.png",
+    "default_title": "SpaceFox",
+    "default_popup": "popup.html",
+    "browser_style": true
+  }
+}
