@@ -1,16 +1,11 @@
 
 # SpaceFox
 
-SpaceFox manages browser tabs. Each window is a space that can be closed and restored on demand.
+SpaceFox helps you manage your tabs. You place each topic into its own space/window and SpaceFox keeps track of them for you.
 
-It works just like the "Restore previous session on startup" (FireFox) and "Continue where you left off" (Chrome) but with multiple named spaces.
+After you are done with a topic you close the browser window. SpaceFox will save all tabs and allow you to restore them at any time.
 
-When you start a new topic (like how to solve a problem)
-- you open a new window,
-- add it to SpaceFox
-- and start browsing.
-
-During your search you may end up with a lot of tabs but you can always close the window and open it again later to continue where you left.
+Because your tabs are stored in your bookmarks you can access them on all devices. Even if you uninstall SpaceFox your tabs will not be lost.
 
 ## Install
 
