@@ -81,7 +81,7 @@ a {
 
 .split {
   display: none;
-  margin: 5px;
+  margin: 0;
 }
 .split .tools {
   margin: 10px;
@@ -95,7 +95,7 @@ a {
 
 .space-view {
   display: none;
-  margin: 5px;
+  margin: 0;
 }
 
 .space-view .title {

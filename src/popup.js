@@ -50,8 +50,7 @@ browser.windows.getCurrent().then(fwin => {
     .then(list => {
       spaces = list.reverse();
       if (space) spaces = spaces.filter(el => el.name !== space.name);
-      // place active first
-      spaces = spaces.filter(el => el.isActive).concat(spaces.filter(el => !el.isActive));
+      spaces.sort((a, b) => a.name.localeCompare(b.name));
       spaces.forEach(addSpace);
     })
     .catch(SpaceFox.onError);
