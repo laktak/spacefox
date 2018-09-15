@@ -3,6 +3,12 @@
 let BOOKMARK_ROOT_NAME = "SpaceFox-Spaces";
 let useWindowValue = !!browser.sessions.getWindowValue; // not supported by chrome
 let altWindowValues = {};
+let isFirefox = browser.runtime.getBrowserInfo;
+
+if (browser.runtime.getBrowserInfo)
+  browser.runtime.getBrowserInfo().then(info => {
+    isFirefox = info.name === "Firefox";
+  });
 
 class SpaceFox {
   constructor(win, name) {
@@ -18,6 +24,7 @@ class SpaceFox {
       name = generateName();
     }
     this.name = name;
+    SpaceFox.setBadge(this.windowId, name);
     SpaceFox.setWindowValue(this.windowId, this.name).catch(SpaceFox.onError);
   }
 
@@ -29,6 +36,7 @@ class SpaceFox {
 
   remove() {
     this.close();
+    SpaceFox.setBadge(this.windowId, "");
     SpaceFox.setWindowValue(this.windowId, "").catch(SpaceFox.onError);
   }
 
@@ -53,6 +61,24 @@ class SpaceFox {
       return browser.sessions.getWindowValue(windowId, "spacefox-name");
     } else {
       return Promise.resolve(altWindowValues[windowId]);
+    }
+  }
+  static setBadge(windowId, text) {
+    if (text && text.length > 3) text = text.substring(0, 3);
+    if (isFirefox) {
+      // for now this is only supported by firefox
+      browser.browserAction.setBadgeText({
+        text: text,
+        windowId: windowId,
+      });
+      browser.browserAction.setBadgeBackgroundColor({
+        color: "#0000cc",
+        windowId: windowId,
+      });
+      browser.browserAction.setTitle({
+        title: text + " - SpaceFox",
+        windowId: windowId,
+      });
     }
   }
 
