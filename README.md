@@ -5,7 +5,22 @@ SpaceFox helps you manage your tabs. You place each topic into its own space/win
 
 After you are done with a topic you close the browser window. SpaceFox will save all tabs and allow you to restore them at any time.
 
-Because your tabs are stored in your bookmarks you can access them on all devices. Even if you uninstall SpaceFox your tabs will not be lost.
+Because your tabs are stored in your bookmarks you can access them on all devices. The default location is Other Bookmarks, SpaceFox - Spaces (to change it just move the folder). Even if you uninstall SpaceFox your tabs will not be lost.
+
+## What it does
+
+- It allows you to save a space with any number of tabs. A space includes all tabs within a window. To save the space you close the window.
+- You can later reopen to space and all your tabs will be restored in a new window.
+- Every time you close the window your space is updated.
+
+## What it does not
+
+- It does not save session data. Restoring a space works just like opening a bookmark.
+- Window positions are not saved.
+
+## Privacy
+
+SpaceFox includes no tracking and does not send any data or statistics about you to anyone.
 
 ## Install
 
